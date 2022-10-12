@@ -16,3 +16,11 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.logo {
+    background: url(https://www.advr.com.br/uploads/images/configuracoes/redimencionar-287-31-logo.png) no-repeat;
+    background-size: 260px 40px;
+    height: 50px;
+    margin: 5px;
+    width: 290px;
+}

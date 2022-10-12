@@ -1,10 +1,13 @@
-﻿@model ErrorViewModel
+﻿@using AdvancedResources.Models.ViewModels
+
+@model ErrorViewModel
 @{
     ViewData["Title"] = "Erro";
 }
 
 <div class="text-center mt-5">
     <h1 class="text-danger">@ViewData["Title"]</h1>
+    <h2 class="text-danger">@Model.Message</h2>
 </div>
 
 @if (Model.ShowRequestId)

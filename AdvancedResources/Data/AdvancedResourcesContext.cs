@@ -9,13 +9,12 @@ namespace AdvancedResources.Data
 {
     public class AdvancedResourcesContext : DbContext
     {
-        public AdvancedResourcesContext (DbContextOptions<AdvancedResourcesContext> options)
+        public AdvancedResourcesContext(DbContextOptions<AdvancedResourcesContext> options)
             : base(options)
         {
         }
 
-        public DbSet<AdvancedResources.Models.Department> Department { get; set; } = default!;
-
-        public DbSet<AdvancedResources.Models.Seller> Seller { get; set; }
+        public DbSet<Department> Department { get; set; }
+        public DbSet<Seller> Seller { get; set; }
     }
 }

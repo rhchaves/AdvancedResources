@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using AdvancedResources.Data;
+using AdvancedResources.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,9 @@ builder.Services.AddDbContext<AdvancedResourcesContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<SellerService>();
+builder.Services.AddScoped<DepartmentService>();
 
 var app = builder.Build();
 

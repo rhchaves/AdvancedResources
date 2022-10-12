@@ -8,7 +8,7 @@ namespace AdvancedResources.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "O nome é obrigatório")]
-        [Display(Name = "Nome")]
+        [Display(Name = "Nome do Departamento")]
         [StringLength(60, MinimumLength = 3, ErrorMessage = "O Nome deve possuir no mínimo {2} e no máximo {1} letras")]
         public string Name { get; set; }
         public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
@@ -26,11 +26,6 @@ namespace AdvancedResources.Models
         public void AddSeller(Seller seller)
         {
             Sellers.Add(seller);
-        }
-
-        public double TotalSales(DateTime initial, DateTime final)
-        {
-            return Sellers.Sum(seller => seller.TotalSales(initial, final));
         }
     }
 }

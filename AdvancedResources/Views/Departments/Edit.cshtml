@@ -4,25 +4,23 @@
     ViewData["Title"] = "Editar Departamento";
 }
 
-<h2>@ViewData["Title"]</h2>
+<h1 class="display-5 m-4 text-center">@ViewData["Title"]</h1>
+<hr class="container-fluid w-50"/>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group mt-2">
-                <input type="submit" value="Salvar" class="btn btn-success" />
-                <a asp-action="Index" class="btn btn-primary">Voltar</a>
-            </div>
-        </form>
-    </div>
+<div class="container-fluid col-md-3">
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="Name" class="control-label mb-3"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <input type="submit" value="Salvar" class="btn btn-success" />
+            <a asp-action="Index" class="btn btn-primary">Voltar</a>
+        </div>
+    </form>
 </div>
 
 @section Scripts {

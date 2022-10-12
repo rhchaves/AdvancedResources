@@ -3,6 +3,7 @@ using System;
 using AdvancedResources.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AdvancedResources.Migrations
 {
     [DbContext(typeof(AdvancedResourcesContext))]
-    partial class AdvancedResourcesContextModelSnapshot : ModelSnapshot
+    [Migration("20221012035101_inicio")]
+    partial class inicio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

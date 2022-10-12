@@ -1,4 +1,4 @@
-﻿using AdvancedResources.Models;
+﻿using AdvancedResources.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

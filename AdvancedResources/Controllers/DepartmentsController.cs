@@ -19,13 +19,13 @@ namespace AdvancedResources.Controllers
             _context = context;
         }
 
-        // GET: Departments
+        // GET: Department
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Department.ToListAsync());
+            return View(await _context.Department.ToListAsync());
         }
 
-        // GET: Departments/Details/5
+        // GET: Department/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Department == null)
@@ -43,13 +43,13 @@ namespace AdvancedResources.Controllers
             return View(department);
         }
 
-        // GET: Departments/Create
+        // GET: Department/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Departments/Create
+        // POST: Department/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -65,7 +65,7 @@ namespace AdvancedResources.Controllers
             return View(department);
         }
 
-        // GET: Departments/Edit/5
+        // GET: Department/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Department == null)
@@ -81,7 +81,7 @@ namespace AdvancedResources.Controllers
             return View(department);
         }
 
-        // POST: Departments/Edit/5
+        // POST: Department/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -116,7 +116,7 @@ namespace AdvancedResources.Controllers
             return View(department);
         }
 
-        // GET: Departments/Delete/5
+        // GET: Department/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Department == null)
@@ -134,7 +134,7 @@ namespace AdvancedResources.Controllers
             return View(department);
         }
 
-        // POST: Departments/Delete/5
+        // POST: Department/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -148,14 +148,14 @@ namespace AdvancedResources.Controllers
             {
                 _context.Department.Remove(department);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool DepartmentExists(int id)
         {
-          return _context.Department.Any(e => e.Id == id);
+            return _context.Department.Any(e => e.Id == id);
         }
     }
 }

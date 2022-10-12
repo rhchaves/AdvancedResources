@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AdvancedResources</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-litera.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AdvancedResources.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid w-75">
+                <a class="navbar-brand md-5" asp-area="" asp-controller="Home" asp-action="Index"> <img href="" alt="Advanced Resources" </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <a class="nav-link text-dark mb-1" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="nav-link text-dark mb-1" asp-area="" asp-controller="Departments" asp-action="Index">Departamentos</a>
+                    <a class="nav-link text-dark mb-1" asp-area="" asp-controller="Sellers" asp-action="Index">Vendedores</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted text-center">
+        <div class="container">
+            &copy; 2022 - AdvancedResources - <a asp-area="" asp-controller="Home" asp-action="Privacy">Política de Privacidade</a>
+            <span class="ms-5">Conheça mais sobre a <a href="https://www.advr.com.br/empresa">Advanced Resources</a>.</span>
+
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
